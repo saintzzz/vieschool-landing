@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VieSchool - Hệ sinh thái số cho trường tiểu học</title>
+<meta name="description" content="VieSchool - hệ sinh thái số cho trường tiểu học Việt Nam: luyện tiếng Anh English Arena, công cụ số giáo viên, sổ chủ nhiệm điện tử." />
+<meta property="og:title" content="VieSchool" />
+<meta property="og:description" content="Một nền tảng - ba sản phẩm: English Arena, Công cụ số Giáo viên, Sổ Chủ nhiệm điện tử." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230B1B3A'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23F59E0B' font-family='Arial' font-weight='bold'%3EV%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #0B1B3A; --navy2: #11264E; --navy3: #162C55;
+    --indigo: #4F46E5; --indigo-l: #818CF8;
+    --gold: #F59E0B; --gold-d: #D97D06;
+    --text: #E7ECF5; --muted: #94A3B8; --line: rgba(255,255,255,.08);
+    --emerald: #10B981; --sky: #0EA5E9;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family: 'Be Vietnam Pro', -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--navy); color: var(--text); line-height:1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width:1100px; margin:0 auto; padding:0 24px; }
+
+  /* ambient */
+  .glow { position:fixed; border-radius:50%; filter:blur(90px); opacity:.5; pointer-events:none; z-index:0; }
+  .glow.g1 { width:520px; height:520px; background:#1e3a8a; top:-180px; right:-120px; }
+  .glow.g2 { width:420px; height:420px; background:#7c5a12; bottom:-160px; left:-140px; opacity:.3; }
+
+  /* header */
+  header { position:relative; z-index:2; padding:26px 0; }
+  .nav { display:flex; align-items:center; justify-content:space-between; }
+  .logo { display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--text); }
+  .logo-mark {
+    width:42px; height:42px; border-radius:12px; display:grid; place-items:center;
+    background:linear-gradient(135deg, var(--gold), var(--gold-d));
+    color:var(--navy); font-weight:800; font-size:22px;
+    box-shadow:0 6px 20px rgba(245,158,11,.35), inset 0 1px 0 rgba(255,255,255,.4);
+  }
+  .logo b { font-size:20px; letter-spacing:.5px; }
+  .logo small { display:block; color:var(--muted); font-size:11px; letter-spacing:1.5px; text-transform:uppercase; }
+  .nav a.cta {
+    padding:10px 20px; border-radius:12px; font-weight:600; font-size:14px;
+    color:#fff; text-decoration:none;
+    background:linear-gradient(180deg, var(--indigo-l), var(--indigo));
+    box-shadow:0 4px 0 rgba(49,46,129,.9), 0 8px 20px rgba(79,70,229,.35);
+    transition:transform .15s, box-shadow .15s;
+  }
+  .nav a.cta:hover { transform:translateY(-2px); }
+
+  /* hero */
+  .hero { position:relative; z-index:2; text-align:center; padding:64px 0 40px; }
+  .kicker {
+    display:inline-block; padding:7px 16px; border-radius:999px; font-size:13px; font-weight:600;
+    color:var(--gold); background:rgba(245,158,11,.1); border:1px solid rgba(245,158,11,.3);
+    letter-spacing:.6px; margin-bottom:22px;
+  }
+  h1 { font-size:clamp(34px,5.6vw,58px); font-weight:800; letter-spacing:-1px; line-height:1.15; }
+  h1 .grad { background:linear-gradient(90deg,#FCD34D,#F59E0B); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .hero p.sub { max-width:660px; margin:20px auto 0; color:var(--muted); font-size:clamp(15px,2vw,18px); }
+  .stats { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:34px; }
+  .stat {
+    padding:12px 22px; border-radius:14px; background:rgba(255,255,255,.05);
+    border:1px solid var(--line); backdrop-filter:blur(6px);
+  }
+  .stat b { color:var(--gold); font-size:19px; display:block; }
+  .stat span { color:var(--muted); font-size:12.5px; }
+
+  /* products */
+  .products { position:relative; z-index:2; display:grid; grid-template-columns:repeat(3,1fr); gap:22px; padding:56px 0 24px; }
+  .card {
+    position:relative; border-radius:22px; padding:30px 26px 26px; text-decoration:none; color:var(--text);
+    background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+    border:1px solid var(--line);
+    box-shadow:0 20px 50px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.08);
+    transition:transform .2s, border-color .2s, box-shadow .2s;
+    display:flex; flex-direction:column;
+  }
+  .card:hover { transform:translateY(-6px); border-color:rgba(255,255,255,.22); box-shadow:0 28px 60px rgba(0,0,0,.45); }
+  .card .icon {
+    width:58px; height:58px; border-radius:16px; display:grid; place-items:center; font-size:30px;
+    margin-bottom:18px; box-shadow:inset 0 2px 0 rgba(255,255,255,.35), 0 8px 20px rgba(0,0,0,.3);
+  }
+  .card h3 { font-size:20px; font-weight:700; margin-bottom:4px; }
+  .card .sub { color:var(--muted); font-size:13px; margin-bottom:14px; }
+  .card p { color:#B9C3D4; font-size:14px; flex:1; }
+  .card .go {
+    margin-top:18px; font-weight:700; font-size:14px; display:inline-flex; align-items:center; gap:6px;
+  }
+  .card .badge {
+    position:absolute; top:18px; right:18px; font-size:10.5px; font-weight:700; letter-spacing:.8px;
+    padding:5px 11px; border-radius:999px; text-transform:uppercase;
+  }
+  .badge.live { color:#052e1b; background:linear-gradient(180deg,#34d399,#10b981); }
+  .badge.dev { color:#3b2f07; background:linear-gradient(180deg,#fcd34d,#f59e0b); }
+  .c-gold .icon { background:linear-gradient(135deg,#FCD34D,#D97D06); } .c-gold .go { color:var(--gold); }
+  .c-ind .icon { background:linear-gradient(135deg,#818CF8,#4F46E5); } .c-ind .go { color:var(--indigo-l); }
+  .c-em .icon { background:linear-gradient(135deg,#34D399,#059669); } .c-em .go { color:var(--emerald); }
+
+  /* why */
+  .why { position:relative; z-index:2; padding:56px 0; }
+  .why h2 { text-align:center; font-size:clamp(24px,3.4vw,34px); font-weight:800; letter-spacing:-.5px; margin-bottom:36px; }
+  .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .why-item { padding:22px; border-radius:18px; background:rgba(255,255,255,.04); border:1px solid var(--line); }
+  .why-item .n { color:var(--gold); font-weight:800; font-size:14px; margin-bottom:8px; }
+  .why-item b { display:block; font-size:15.5px; margin-bottom:6px; }
+  .why-item p { color:var(--muted); font-size:13.5px; }
+
+  /* footer */
+  footer { position:relative; z-index:2; border-top:1px solid var(--line); padding:34px 0 44px; margin-top:30px; }
+  .foot { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+  .foot .l { color:var(--muted); font-size:13px; }
+  .foot .domains { display:flex; gap:18px; flex-wrap:wrap; }
+  .foot .domains a { color:#B9C3D4; font-size:13.5px; text-decoration:none; border-bottom:1px dashed rgba(255,255,255,.25); padding-bottom:1px; }
+  .foot .domains a:hover { color:var(--gold); }
+
+  @media (max-width:860px) {
+    .products { grid-template-columns:1fr; }
+    .why-grid { grid-template-columns:1fr; }
+    .hero { padding:40px 0 24px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition:none !important; scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/">
+      <span class="logo-mark">V</span>
+      <span><b>VIESCHOOL</b><small>Hệ sinh thái số - Trường tiểu học</small></span>
+    </a>
+    <a class="cta" href="https://ea.vieschool.com">Luyện tập ngay</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="kicker">1 NỀN TẢNG - 3 SẢN PHẨM - HỖ TRỢ LỚP 1-12</span>
+    <h1>Trường tiểu học <span class="grad">số hóa</span>,<br/>từ luyện tập đến quản lý lớp</h1>
+    <p class="sub">VieSchool kết nối học sinh, giáo viên và nhà trường trên một nền tảng:
+      bé luyện Tiếng Anh, Toán và Khoa học bằng tiếng Anh đúng SGK, cô giáo
+      tiết kiệm giờ soạn bài, ban giám hiệu số hóa sổ chủ nhiệm.</p>
+    <div class="stats">
+      <div class="stat"><b>11.400+</b><span>câu hỏi có giải thích</span></div>
+      <div class="stat"><b>270</b><span>đề thi theo khối</span></div>
+      <div class="stat"><b>3</b><span>môn luyện bằng tiếng Anh</span></div>
+      <div class="stat"><b>12</b><span>công cụ số cho GV</span></div>
+      <div class="stat"><b>5</b><span>khối lớp 1-5</span></div>
+    </div>
+  </section>
+
+  <section class="products">
+    <a class="card c-gold" href="https://ea.vieschool.com">
+      <span class="badge live">Đang chạy</span>
+      <div class="icon">&#127918;</div>
+      <h3>English Arena</h3>
+      <div class="sub">ea.vieschool.com - Lớp 1-5 (lộ trình lớp 6-12)</div>
+      <p>Ngân hàng 11.400+ câu hỏi bám SGK Global Success, mỗi câu kèm
+        giải thích tiếng Việt. 270 đề thi chuẩn theo format đề IOE - số câu
+        và thời gian chỉnh riêng từng khối. 3 môn: Tiếng Anh, Toán tiếng Anh,
+        Khoa học tiếng Anh. Ôn luyện có đồng hồ đo giờ, câu sai tự đưa vào
+        hàng đợi ôn lại. Bảng xếp hạng tuần, đấu trường 1v1, vào lớp bằng
+        mã 6 ký tự. Hình ảnh bản quyền rõ ràng, không quảng cáo, không chat.</p>
+      <span class="go">Vào luyện tập &#8594;</span>
+    </a>
+    <a class="card c-ind" href="https://congcuso.vieschool.com">
+      <span class="badge live">Đang chạy</span>
+      <div class="icon">&#128221;</div>
+      <h3>Công cụ số Giáo viên</h3>
+      <div class="sub">congcuso.vieschool.com - dành cho giáo viên</div>
+      <p>12 công cụ biên soạn học liệu theo CTGDPT 2018 (gồm sửa đổi TT 17/2025 - Lịch sử, Địa lí, GDCD): ngân hàng câu hỏi,
+        ma trận đề, soạn đề có công thức toán Word-native, hỗ trợ AI. Xuất DOCX/PDF
+        đúng format nhà trường.</p>
+      <span class="go">Mở công cụ &#8594;</span>
+    </a>
+    <a class="card c-em" href="https://sochunhiem.vieschool.com">
+      <span class="badge live">Đang chạy</span>
+      <div class="icon">&#128215;</div>
+      <h3>Sổ Chủ nhiệm điện tử</h3>
+      <div class="sub">sochunhiem.vieschool.com - dành cho nhà trường</div>
+      <p>Số hóa sổ chủ nhiệm theo Điều lệ trường mới nhất (TT 15/2026): điểm danh, hạnh kiểm,
+        điểm số, nhận xét định kỳ. Dữ liệu lớp đồng bộ - giáo viên chỉ nhập một lần.</p>
+      <span class="go">Đăng nhập sổ &#8594;</span>
+    </a>
+  </section>
+
+  <section class="why">
+    <h2>Tại sao trường học chọn VieSchool</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="n">01</div>
+        <b>Đúng chương trình Việt Nam</b>
+        <p>Nội dung bám SGK Tiếng Anh Global Success theo CTGDPT 2018 - luyện trên app là học đúng điều đang học trên lớp.</p>
+      </div>
+      <div class="why-item">
+        <div class="n">02</div>
+        <b>Trọn trong một hệ sinh thái</b>
+        <p>Thay vì 3 app rời rạc, trường mua một nền tảng: dữ liệu lớp, tài khoản, phân quyền thống nhất.</p>
+      </div>
+      <div class="why-item">
+        <div class="n">03</div>
+        <b>Trọng tâm là trẻ em</b>
+        <p>Không quảng cáo, không chat, nút chạm lớn 76px, hỗ trợ giảm chuyển động - an toàn cho học sinh tiểu học.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="l">VieSchool - hệ sinh thái số cho trường tiểu học Việt Nam</div>
+    <div class="domains">
+      <a href="https://ea.vieschool.com">ea.vieschool.com</a>
+      <a href="https://congcuso.vieschool.com">congcuso.vieschool.com</a>
+      <a href="https://sochunhiem.vieschool.com">sochunhiem.vieschool.com</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
