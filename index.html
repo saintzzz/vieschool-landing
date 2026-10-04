@@ -112,6 +112,44 @@
   .why-item b { display:block; font-size:15.5px; margin-bottom:6px; }
   .why-item p { color:var(--muted); font-size:13.5px; }
 
+  /* pricing */
+  .pricing { position:relative; z-index:2; padding:56px 0 10px; }
+  .pricing h2 { text-align:center; font-size:clamp(24px,3.4vw,34px); font-weight:800; letter-spacing:-.5px; }
+  .pricing .pr-sub { text-align:center; color:var(--muted); font-size:14.5px; margin:10px auto 30px; max-width:620px; }
+  .pr-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .pr-card {
+    border-radius:20px; padding:26px 24px; border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    display:flex; flex-direction:column;
+  }
+  .pr-card.hot { border-color:rgba(245,158,11,.5); box-shadow:0 0 0 1px rgba(245,158,11,.25), 0 18px 40px rgba(0,0,0,.3); }
+  .pr-card .who { font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--muted); }
+  .pr-card .price { font-size:32px; font-weight:800; color:var(--gold); margin:10px 0 2px; }
+  .pr-card .per { color:var(--muted); font-size:13px; margin-bottom:16px; }
+  .pr-card ul { list-style:none; flex:1; }
+  .pr-card li { font-size:13.5px; color:#B9C3D4; padding:6px 0 6px 22px; position:relative; border-bottom:1px dashed rgba(255,255,255,.06); }
+  .pr-card li:last-child { border-bottom:none; }
+  .pr-card li::before { content:"✓"; position:absolute; left:0; color:var(--emerald); font-weight:800; }
+  .pr-tag { display:inline-block; align-self:flex-start; margin-top:16px; padding:6px 14px; border-radius:999px; font-size:12px; font-weight:700; color:#052e1b; background:linear-gradient(180deg,#34d399,#10b981); }
+
+  /* payment */
+  .pay {
+    margin-top:22px; border-radius:20px; padding:26px;
+    border:1px solid rgba(245,158,11,.35);
+    background:linear-gradient(120deg, rgba(245,158,11,.1), rgba(255,255,255,.02));
+    display:grid; grid-template-columns:auto 1fr; gap:26px; align-items:center;
+  }
+  .pay .qr {
+    width:150px; height:150px; border-radius:14px; background:#fff; padding:8px;
+    box-shadow:0 10px 26px rgba(0,0,0,.4);
+  }
+  .pay .qr img { width:100%; height:100%; display:block; border-radius:8px; }
+  .pay h3 { font-size:18px; font-weight:800; margin-bottom:10px; }
+  .pay .bank { display:flex; flex-wrap:wrap; gap:10px 26px; font-size:14.5px; }
+  .pay .bank b { color:var(--gold); font-weight:800; letter-spacing:.5px; }
+  .pay .note { color:var(--muted); font-size:13px; margin-top:10px; }
+  .pay .memo { font-family:ui-monospace, Menlo, Consolas, monospace; color:#FCD34D; font-weight:700; }
+
   /* footer */
   footer { position:relative; z-index:2; border-top:1px solid var(--line); padding:34px 0 44px; margin-top:30px; }
   .foot { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
@@ -123,6 +161,9 @@
   @media (max-width:860px) {
     .products { grid-template-columns:1fr; }
     .why-grid { grid-template-columns:1fr; }
+    .pr-grid { grid-template-columns:1fr; }
+    .pay { grid-template-columns:1fr; justify-items:center; text-align:center; }
+    .pay .bank { justify-content:center; }
     .hero { padding:40px 0 24px; }
   }
   @media (prefers-reduced-motion: reduce) { * { transition:none !important; scroll-behavior:auto; } }
@@ -190,6 +231,66 @@
         điểm số, nhận xét định kỳ. Dữ liệu lớp đồng bộ - giáo viên chỉ nhập một lần.</p>
       <span class="go">Đăng nhập sổ &#8594;</span>
     </a>
+  </section>
+
+  <section class="pricing" id="bang-gia">
+    <h2>Bảng giá English Arena</h2>
+    <p class="pr-sub">Đã gồm cả 3 môn Tiếng Anh - Toán tiếng Anh - Khoa học tiếng Anh,
+      khối lớp 1-5. Dùng thử miễn phí không cần tài khoản.</p>
+    <div class="pr-grid">
+      <div class="pr-card hot">
+        <span class="who">Gia đình</span>
+        <div class="price">399.000đ</div>
+        <div class="per">/ học sinh / năm học</div>
+        <ul>
+          <li>Gói Mùa thi 6 tháng: 249.000đ</li>
+          <li>Founding Family: 299.000đ/năm - 300 gia đình đầu tiên</li>
+          <li>Anh chị em: giảm 50% từ con thứ 2</li>
+          <li>Toàn bộ chế độ: luyện tập, thi thử, ôn câu sai, đấu trường, báo cáo phụ huynh</li>
+        </ul>
+        <span class="pr-tag">Phổ biến nhất</span>
+      </div>
+      <div class="pr-card">
+        <span class="who">Lớp học</span>
+        <div class="price">199.000đ</div>
+        <div class="per">/ học sinh / năm - từ 15 học sinh cùng lớp</div>
+        <ul>
+          <li>Phụ huynh đăng ký qua mã lớp của giáo viên</li>
+          <li>Giáo viên được dùng miễn phí quyền xem lớp</li>
+          <li>Trường tư / trung tâm: 3.900.000đ/lớp/năm - tối đa 35 HS</li>
+          <li>Thêm học sinh: 120.000đ/HS</li>
+        </ul>
+      </div>
+      <div class="pr-card">
+        <span class="who">Trường học</span>
+        <div class="price">99.000đ</div>
+        <div class="per">/ học sinh / năm - từ 100 học sinh</div>
+        <ul>
+          <li>300-799 HS: 79.000đ/HS/năm - từ 800 HS: liên hệ</li>
+          <li>Tạo tài khoản hàng loạt, phiếu đăng nhập in sẵn</li>
+          <li>Báo cáo phụ huynh + 1 buổi hướng dẫn giáo viên</li>
+          <li>Mua kèm TVC360/Sổ Chủ nhiệm: giảm 15%</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pay">
+      <div class="qr">
+        <img src="https://img.vietqr.io/image/TPB-01579495001-compact2.png?accountName=LE%20DUY%20LINH"
+             alt="QR chuyển khoản TPBank - LE DUY LINH" loading="lazy" />
+      </div>
+      <div>
+        <h3>Thanh toán chuyển khoản</h3>
+        <div class="bank">
+          <span>Ngân hàng: <b>TPBank</b></span>
+          <span>Số tài khoản: <b>0157 9495 001</b></span>
+          <span>Chủ tài khoản: <b>LE DUY LINH</b></span>
+        </div>
+        <p class="note">Nội dung chuyển khoản: <span class="memo">VS &lt;số điện thoại&gt; &lt;gói&gt;</span>
+          - ví dụ <span class="memo">VS 0901234567 NAMHOC</span>.
+          Quét mã VietQR hoặc nhập số tài khoản; tài khoản học được kích hoạt
+          trong vòng 24 giờ qua số điện thoại ghi trong nội dung.</p>
+      </div>
+    </div>
   </section>
 
   <section class="why">
