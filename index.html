@@ -131,6 +131,16 @@
   .pr-card li:last-child { border-bottom:none; }
   .pr-card li::before { content:"✓"; position:absolute; left:0; color:var(--emerald); font-weight:800; }
   .pr-tag { display:inline-block; align-self:flex-start; margin-top:16px; padding:6px 14px; border-radius:999px; font-size:12px; font-weight:700; color:#052e1b; background:linear-gradient(180deg,#34d399,#10b981); }
+  .promo-banner {
+    text-align:center; margin:0 auto 26px; max-width:640px; padding:14px 22px; border-radius:16px;
+    border:1px solid rgba(245,158,11,.45);
+    background:linear-gradient(120deg, rgba(245,158,11,.16), rgba(245,158,11,.05));
+    box-shadow:0 8px 30px rgba(245,158,11,.12);
+  }
+  .promo-banner b { color:#FCD34D; font-weight:800; font-size:15.5px; letter-spacing:.3px; }
+  .promo-banner span { color:var(--muted); font-size:13px; }
+  .promo-banner .dl { display:inline-block; margin-left:8px; padding:3px 10px; border-radius:999px; font-size:11.5px; font-weight:700; color:var(--navy); background:linear-gradient(180deg,#FCD34D,#F59E0B); }
+  .pr-card .old { color:var(--muted); font-size:17px; font-weight:600; text-decoration:line-through; margin-bottom:2px; }
 
   /* payment */
   .pay {
@@ -240,14 +250,19 @@
     <h2>Bảng giá English Arena</h2>
     <p class="pr-sub">Đã gồm cả 3 môn Tiếng Anh - Toán tiếng Anh - Khoa học tiếng Anh,
       khối lớp 1-5. Dùng thử miễn phí không cần tài khoản.</p>
+    <div class="promo-banner">
+      <b>Ưu đãi ra mắt - giảm tới 25% mọi gói</b>
+      <span class="dl">Đến hết 31/12/2026</span><br/>
+      <span>Giá ưu đãi giữ nguyên suốt thời hạn gói. Gia hạn năm sau vẫn được giá gốc của đợt đăng ký.</span>
+    </div>
     <div class="pr-grid">
       <div class="pr-card hot">
         <span class="who">Gia đình</span>
-        <div class="price">399.000đ</div>
+        <div class="old">399.000đ</div>
+        <div class="price">299.000đ</div>
         <div class="per">/ học sinh / năm học</div>
         <ul>
-          <li>Gói Mùa thi 6 tháng: 249.000đ</li>
-          <li>Founding Family: 299.000đ/năm - 300 gia đình đầu tiên</li>
+          <li>Gói Mùa thi 6 tháng: 199.000đ <s style="color:var(--muted)">249.000đ</s></li>
           <li>Anh chị em: giảm 50% từ con thứ 2</li>
           <li>Toàn bộ chế độ: luyện tập, thi thử, ôn câu sai, đấu trường, báo cáo phụ huynh</li>
           <li>Phân tích điểm yếu theo kỹ năng - gợi ý bài ôn riêng cho từng em</li>
@@ -257,24 +272,26 @@
       </div>
       <div class="pr-card">
         <span class="who">Lớp học</span>
-        <div class="price">199.000đ</div>
+        <div class="old">199.000đ</div>
+        <div class="price">169.000đ</div>
         <div class="per">/ học sinh / năm - từ 15 học sinh cùng lớp</div>
         <ul>
           <li>Phụ huynh đăng ký qua mã lớp của giáo viên</li>
           <li>Giáo viên được dùng miễn phí quyền xem lớp</li>
-          <li>Trường tư / trung tâm: 3.900.000đ/lớp/năm - tối đa 35 HS</li>
-          <li>Thêm học sinh: 120.000đ/HS</li>
+          <li>Trường tư / trung tâm: 3.200.000đ/lớp/năm <s style="color:var(--muted)">3.900.000đ</s> - tối đa 35 HS</li>
+          <li>Thêm học sinh: 99.000đ/HS <s style="color:var(--muted)">120.000đ</s></li>
         </ul>
       </div>
       <div class="pr-card">
         <span class="who">Trường học</span>
-        <div class="price">99.000đ</div>
+        <div class="old">99.000đ</div>
+        <div class="price">79.000đ</div>
         <div class="per">/ học sinh / năm - từ 100 học sinh</div>
         <ul>
-          <li>300-799 HS: 79.000đ/HS/năm - từ 800 HS: liên hệ</li>
+          <li>300-799 HS: 69.000đ/HS/năm <s style="color:var(--muted)">79.000đ</s> - từ 800 HS: liên hệ</li>
           <li>Tạo tài khoản hàng loạt, phiếu đăng nhập in sẵn</li>
           <li>Báo cáo phụ huynh + 1 buổi hướng dẫn giáo viên</li>
-          <li>Mua kèm TVC360/Sổ Chủ nhiệm: giảm 15%</li>
+          <li>Mua kèm TVC360/Sổ Chủ nhiệm: giảm thêm 15%</li>
         </ul>
       </div>
     </div>
@@ -303,18 +320,33 @@
     <div class="why-grid">
       <div class="why-item">
         <div class="n">01</div>
-        <b>Đúng chương trình Việt Nam</b>
-        <p>Nội dung bám SGK Tiếng Anh Global Success theo CTGDPT 2018 - luyện trên app là học đúng điều đang học trên lớp.</p>
+        <b>Một nền tảng - ba sản phẩm liền mạch</b>
+        <p>Học sinh luyện tập trên English Arena, giáo viên soạn bài trên Công cụ số, GVCN quản lý lớp trong Sổ Chủ nhiệm. Tài khoản, dữ liệu lớp, phân quyền thống nhất - nhập một lần dùng cho cả ba.</p>
       </div>
       <div class="why-item">
         <div class="n">02</div>
-        <b>Trọn trong một hệ sinh thái</b>
-        <p>Thay vì 3 app rời rạc, trường mua một nền tảng: dữ liệu lớp, tài khoản, phân quyền thống nhất.</p>
+        <b>Đúng chương trình, đúng văn bản mới nhất</b>
+        <p>Nội dung bám SGK Global Success theo CTGDPT 2018; công cụ giáo viên cập nhật TT 17/2025 (Lịch sử, Địa lí, GDCD); sổ chủ nhiệm theo Điều lệ trường TT 15/2026. Văn bản thay đổi là hệ thống cập nhật.</p>
       </div>
       <div class="why-item">
         <div class="n">03</div>
+        <b>Dữ liệu xuyên suốt - nhìn một chỗ thấy hết</b>
+        <p>Điểm danh và hạnh kiểm trong Sổ Chủ nhiệm thành báo cáo phụ huynh hằng tuần; kết quả luyện trên English Arena phân tích điểm yếu theo kỹ năng cho từng em. Ban giám hiệu có minh chứng chất lượng không phải gom tay.</p>
+      </div>
+      <div class="why-item">
+        <div class="n">04</div>
+        <b>Mua cả hệ sinh thái - tiết kiệm hơn từng app rời</b>
+        <p>Một hợp đồng, một quy trình triển khai, một đội hỗ trợ. Trường mua kèm nhiều sản phẩm giảm thêm 15% - tổng chi phí thấp hơn đáng kể so với mua 3 hệ thống rời rạc.</p>
+      </div>
+      <div class="why-item">
+        <div class="n">05</div>
         <b>Trọng tâm là trẻ em</b>
         <p>Không quảng cáo, không chat, nút chạm lớn 76px, hỗ trợ giảm chuyển động - an toàn cho học sinh tiểu học.</p>
+      </div>
+      <div class="why-item">
+        <div class="n">06</div>
+        <b>Triển khai nhanh, có người đồng hành</b>
+        <p>Tạo tài khoản hàng loạt từ danh sách lớp, phiếu đăng nhập in sẵn cho từng em, kèm buổi hướng dẫn cho giáo viên. Trường lên sóng trong tuần, không cần phòng CNTT riêng.</p>
       </div>
     </div>
   </section>
