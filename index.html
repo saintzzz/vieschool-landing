@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>VieSchool - Hệ sinh thái số cho trường tiểu học</title>
-<meta name="description" content="VieSchool - hệ sinh thái số cho trường tiểu học Việt Nam: luyện tiếng Anh English Arena, công cụ số giáo viên, sổ chủ nhiệm điện tử." />
+<meta name="description" content="VieSchool - hệ sinh thái số cho trường tiểu học Việt Nam: luyện tiếng Anh English Arena (11.400+ câu hỏi SGK, 270 đề thi, 15 trò chơi), công cụ số giáo viên, sổ chủ nhiệm điện tử." />
 <meta property="og:title" content="VieSchool" />
 <meta property="og:description" content="Một nền tảng - ba sản phẩm: English Arena, Công cụ số Giáo viên, Sổ Chủ nhiệm điện tử." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230B1B3A'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23F59E0B' font-family='Arial' font-weight='bold'%3EV%3C/text%3E%3C/svg%3E" />
@@ -93,6 +93,14 @@
   .card .go {
     margin-top:18px; font-weight:700; font-size:14px; display:inline-flex; align-items:center; gap:6px;
   }
+  .card .feats { list-style:none; margin-top:14px; flex:1; }
+  .card .feats li {
+    font-size:13px; color:#B9C3D4; padding:7px 0 7px 22px; position:relative;
+    border-bottom:1px dashed rgba(255,255,255,.06); line-height:1.55;
+  }
+  .card .feats li:last-child { border-bottom:none; }
+  .card .feats li::before { content:"✓"; position:absolute; left:0; top:7px; color:var(--gold); font-weight:800; }
+  .card .feats li b { color:var(--text); }
   .card .badge {
     position:absolute; top:18px; right:18px; font-size:10.5px; font-weight:700; letter-spacing:.8px;
     padding:5px 11px; border-radius:999px; text-transform:uppercase;
@@ -204,7 +212,8 @@
       <div class="stat"><b>270</b><span>đề thi theo khối</span></div>
       <div class="stat"><b>3</b><span>môn luyện bằng tiếng Anh</span></div>
       <div class="stat"><b>12</b><span>công cụ số cho GV</span></div>
-      <div class="stat"><b>5</b><span>khối lớp 1-5</span></div>
+      <div class="stat"><b>15</b><span>trò chơi học tập</span></div>
+      <div class="stat"><b>500+</b><span>từ vựng minh họa</span></div>
     </div>
   </section>
 
@@ -215,14 +224,25 @@
       <h3>English Arena</h3>
       <div class="sub">ea.vieschool.com - Lớp 1-5 (lộ trình lớp 6-12)</div>
       <p>Ngân hàng 11.400+ câu hỏi bám SGK Global Success, mỗi câu kèm
-        giải thích tiếng Việt. 270 đề thi chuẩn theo format đề IOE - số câu
+        giải thích tiếng Việt. 270 đề thi chuẩn format IOE - số câu
         và thời gian chỉnh riêng từng khối. 3 môn: Tiếng Anh, Toán tiếng Anh,
-        Khoa học tiếng Anh. Hệ thống tự phân tích điểm yếu theo kỹ năng sau
-        1 tuần làm bài và gợi ý bài ôn cá nhân hóa cho từng em; chế độ
-        Nâng cao riêng cho học sinh muốn thử thách hơn. Ôn luyện có đồng hồ
-        đo giờ, câu sai tự đưa vào hàng đợi ôn lại. Bảng xếp hạng tuần,
-        đấu trường 1v1, vào lớp bằng mã 6 ký tự. Hình ảnh bản quyền rõ ràng,
-        không quảng cáo, không chat.</p>
+        Khoa học tiếng Anh.</p>
+      <ul class="feats">
+        <li><b>Khu trò chơi 15 trò</b> học mà chơi: đua xe, câu cá, đập chuột,
+          đi mê cung, đào vàng, Ai là triệu phú - mỗi trò 3 màn khó dần,
+          đồng hồ bấm giờ, điểm thưởng tốc độ, sao thành tích theo màn</li>
+        <li><b>Thẻ từ vựng 500+ từ</b> theo chủ đề SGK, ảnh thật và hoạt hình
+          sống động - em tự lọc từ cần ôn lại</li>
+        <li><b>Luyện phát âm</b> bằng nhận diện giọng nói, chấm từng từ em đọc</li>
+        <li><b>Ôn đúng chỗ yếu</b> - phân tích điểm yếu theo kỹ năng, gợi ý
+          bài ôn cá nhân hóa; câu sai tự vào hàng đợi ôn lại; chế độ
+          Nâng cao cho em thích thử thách</li>
+        <li><b>Đấu trường 1v1</b>, bảng xếp hạng tuần, sao và quà
+          trong Phần thưởng</li>
+        <li><b>Vào lớp bằng mã 6 ký tự</b> - giáo viên theo dõi tiến độ từng em</li>
+        <li><b>An toàn cho trẻ</b> - không quảng cáo, không chat,
+          hình ảnh bản quyền rõ ràng</li>
+      </ul>
       <span class="go">Vào luyện tập &#8594;</span>
     </a>
     <a class="card c-ind" href="https://congcuso.vieschool.com">
