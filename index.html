@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>VieSchool - Hệ sinh thái số cho trường tiểu học</title>
-<meta name="description" content="VieSchool - hệ sinh thái số cho trường tiểu học Việt Nam: luyện tiếng Anh English Arena (11.400+ câu hỏi SGK, 270 đề thi, 15 trò chơi), công cụ số giáo viên, sổ chủ nhiệm điện tử." />
+<meta name="description" content="VieSchool - hệ sinh thái số cho trường tiểu học Việt Nam: luyện tiếng Anh English Arena (99.000+ câu hỏi SGK 3 môn, 290+ đề thi, 15 trò chơi), công cụ số giáo viên, sổ chủ nhiệm điện tử." />
 <meta property="og:title" content="VieSchool" />
 <meta property="og:description" content="Một nền tảng - ba sản phẩm: English Arena, Công cụ số Giáo viên, Sổ Chủ nhiệm điện tử." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230B1B3A'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23F59E0B' font-family='Arial' font-weight='bold'%3EV%3C/text%3E%3C/svg%3E" />
@@ -53,6 +53,30 @@
     transition:transform .15s, box-shadow .15s;
   }
   .nav a.cta:hover { transform:translateY(-2px); }
+  .nav a.ghost {
+    padding:10px 16px; border-radius:12px; font-weight:600; font-size:14px;
+    color:var(--muted); text-decoration:none; border:1px solid var(--line);
+    margin-right:10px; transition:color .15s, border-color .15s;
+  }
+  .nav a.ghost:hover { color:var(--gold); border-color:rgba(245,158,11,.4); }
+
+  /* b2b contact */
+  .b2b {
+    margin-top:22px; border-radius:20px; padding:26px;
+    border:1px solid rgba(129,140,248,.4);
+    background:linear-gradient(120deg, rgba(79,70,229,.14), rgba(255,255,255,.02));
+    display:grid; grid-template-columns:1fr auto; gap:20px; align-items:center;
+  }
+  .b2b h3 { font-size:18px; font-weight:800; margin-bottom:8px; }
+  .b2b p { color:var(--muted); font-size:14px; max-width:640px; }
+  .b2b a.mail {
+    padding:13px 24px; border-radius:12px; font-weight:700; font-size:15px;
+    color:var(--navy); text-decoration:none; white-space:nowrap;
+    background:linear-gradient(180deg,#FCD34D,#F59E0B);
+    box-shadow:0 4px 0 rgba(146,64,14,.9), 0 8px 20px rgba(245,158,11,.3);
+    transition:transform .15s, box-shadow .15s;
+  }
+  .b2b a.mail:hover { transform:translateY(-2px); }
 
   /* hero */
   .hero { position:relative; z-index:2; text-align:center; padding:64px 0 40px; }
@@ -182,6 +206,7 @@
     .pr-grid { grid-template-columns:1fr; }
     .pay { grid-template-columns:1fr; justify-items:center; text-align:center; }
     .pay .bank { justify-content:center; }
+    .b2b { grid-template-columns:1fr; text-align:center; justify-items:center; }
     .hero { padding:40px 0 24px; }
   }
   @media (prefers-reduced-motion: reduce) { * { transition:none !important; scroll-behavior:auto; } }
@@ -196,24 +221,25 @@
       <span class="logo-mark">V</span>
       <span><b>VIESCHOOL</b><small>Hệ sinh thái số - Trường tiểu học</small></span>
     </a>
+    <a class="ghost" href="mailto:hello@vieschool.com">Liên hệ</a>
     <a class="cta" href="https://ea.vieschool.com">Luyện tập ngay</a>
   </div>
 </header>
 
 <main class="wrap">
   <section class="hero">
-    <span class="kicker">1 NỀN TẢNG - 3 SẢN PHẨM - HỖ TRỢ LỚP 1-12</span>
+    <span class="kicker">1 NỀN TẢNG - 3 SẢN PHẨM - KHỐI TIỂU HỌC</span>
     <h1>Trường tiểu học <span class="grad">số hóa</span>,<br/>từ luyện tập đến quản lý lớp</h1>
     <p class="sub">VieSchool kết nối học sinh, giáo viên và nhà trường trên một nền tảng:
       bé luyện Tiếng Anh, Toán và Khoa học bằng tiếng Anh đúng SGK, cô giáo
       tiết kiệm giờ soạn bài, ban giám hiệu số hóa sổ chủ nhiệm.</p>
     <div class="stats">
-      <div class="stat"><b>11.400+</b><span>câu hỏi có giải thích</span></div>
-      <div class="stat"><b>270</b><span>đề thi theo khối</span></div>
+      <div class="stat"><b>99.000+</b><span>câu hỏi có giải thích - 3 môn</span></div>
+      <div class="stat"><b>290+</b><span>đề thi theo khối</span></div>
       <div class="stat"><b>3</b><span>môn luyện bằng tiếng Anh</span></div>
       <div class="stat"><b>12</b><span>công cụ số cho GV</span></div>
       <div class="stat"><b>15</b><span>trò chơi học tập</span></div>
-      <div class="stat"><b>500+</b><span>từ vựng minh họa</span></div>
+      <div class="stat"><b>330+</b><span>từ vựng minh họa</span></div>
     </div>
   </section>
 
@@ -223,16 +249,19 @@
       <div class="icon">&#127918;</div>
       <h3>English Arena</h3>
       <div class="sub">ea.vieschool.com - Lớp 1-5 (lộ trình lớp 6-12)</div>
-      <p>Ngân hàng 11.400+ câu hỏi bám SGK Global Success, mỗi câu kèm
-        giải thích tiếng Việt. 270 đề thi chuẩn format IOE - số câu
+      <p>Ngân hàng 99.000+ câu hỏi bám SGK Global Success, mỗi câu kèm
+        giải thích tiếng Việt. 290+ đề thi chuẩn format IOE - số câu
         và thời gian chỉnh riêng từng khối. 3 môn: Tiếng Anh, Toán tiếng Anh,
         Khoa học tiếng Anh.</p>
       <ul class="feats">
         <li><b>Khu trò chơi 15 trò</b> học mà chơi: đua xe, câu cá, đập chuột,
           đi mê cung, đào vàng, Ai là triệu phú - mỗi trò 3 màn khó dần,
-          đồng hồ bấm giờ, điểm thưởng tốc độ, sao thành tích theo màn</li>
-        <li><b>Thẻ từ vựng 500+ từ</b> theo chủ đề SGK, ảnh thật và hoạt hình
+          đồng hồ bấm giờ, điểm thưởng tốc độ, sao thành tích theo màn,
+          combo chuỗi trả lời đúng</li>
+        <li><b>Thẻ từ vựng 330+ từ</b> theo chủ đề SGK, ảnh thật và hoạt hình
           sống động - em tự lọc từ cần ôn lại</li>
+        <li><b>Nghe hiểu gần 400 bài</b> có transcript kèm giọng đọc chuẩn -
+          luyện tai theo đúng chủ đề SGK</li>
         <li><b>Luyện phát âm</b> bằng nhận diện giọng nói, chấm từng từ em đọc</li>
         <li><b>Ôn đúng chỗ yếu</b> - phân tích điểm yếu theo kỹ năng, gợi ý
           bài ôn cá nhân hóa; câu sai tự vào hàng đợi ôn lại; chế độ
@@ -333,6 +362,15 @@
           trong vòng 24 giờ qua số điện thoại ghi trong nội dung.</p>
       </div>
     </div>
+    <div class="b2b">
+      <div>
+        <h3>Dành cho trung tâm &amp; trường học</h3>
+        <p>Muốn xem hệ thống trước khi quyết định? VieSchool cấp tài khoản dùng thử
+          cho giáo viên trong 24 giờ - kèm buổi hướng dẫn triển khai cho lớp đầu tiên,
+          báo cáo tiến độ từng học viên và phiếu đăng nhập in sẵn cho cả lớp.</p>
+      </div>
+      <a class="mail" href="mailto:hello@vieschool.com?subject=D%C3%B9ng%20th%E1%BB%AD%20English%20Arena">hello@vieschool.com</a>
+    </div>
   </section>
 
   <section class="why">
@@ -379,6 +417,7 @@
       <a href="https://ea.vieschool.com">ea.vieschool.com</a>
       <a href="https://congcuso.vieschool.com">congcuso.vieschool.com</a>
       <a href="https://sochunhiem.vieschool.com">sochunhiem.vieschool.com</a>
+      <a href="mailto:hello@vieschool.com">hello@vieschool.com</a>
     </div>
   </div>
 </footer>
