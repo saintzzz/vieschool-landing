@@ -1,0 +1,14 @@
+# VieSchool
+
+> Hệ sinh thái số cho trường tiểu học Việt Nam. Một nền tảng - ba sản phẩm: English Arena (luyện tiếng Anh theo SGK), Công cụ số Giáo viên, Sổ Chủ nhiệm điện tử. VieSchool Fast Track là trang hướng dẫn sân bay Việt Nam bằng tiếng Anh cho khách quốc tế.
+
+## Products
+
+- [English Arena](https://ea.vieschool.com): Luyện tiếng Anh tiểu học - 99.000+ câu hỏi SGK, 290+ đề thi IOE, 15 trò chơi
+- [Sổ Chủ nhiệm số](https://sochunhiem.vieschool.com): Sổ chủ nhiệm điện tử cho GVCN - nhận xét, hạnh kiểm, báo cáo theo Thông tư 22
+- [VieSchool Fast Track](https://fasttrack.vieschool.com): Vietnam airport arrival guides in English - fast track, e-Visa, immigration wait times
+
+## Contact
+
+- hello@vieschool.com
+- Zalo / WhatsApp: 0948 042 989
