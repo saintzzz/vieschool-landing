@@ -1,13 +1,6 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-N7972RKYVY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-N7972RKYVY');
-</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>VieSchool - Hệ sinh thái số cho trường tiểu học</title>
@@ -268,7 +261,8 @@
 
   /* footer */
   footer { position:relative; z-index:2; border-top:1px solid var(--line); padding:34px 0 44px; margin-top:30px; }
-  .foot { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+  .foot { display:flex; flex-direction:column; gap:10px; }
+  .legal-id { color:var(--muted); font-size:13px; }
   .foot .l { color:var(--muted); font-size:13px; }
   .foot .domains { display:flex; gap:18px; flex-wrap:wrap; }
   .foot .domains a { color:#B9C3D4; font-size:13.5px; text-decoration:none; border-bottom:1px dashed rgba(255,255,255,.25); padding-bottom:1px; }
@@ -442,7 +436,8 @@
         <p>Muốn xem hệ thống trước khi quyết định? VieSchool cấp tài khoản dùng thử
           cho giáo viên trong 24 giờ - kèm buổi hướng dẫn triển khai cho lớp đầu tiên,
           báo cáo tiến độ từng học viên và phiếu đăng nhập in sẵn cho cả lớp.
-          Giáo viên và đơn vị giới thiệu học sinh được hưởng <b style="color:var(--gold)">chính sách chia sẻ doanh thu</b> theo số học viên đăng ký.
+          Trung tâm, đơn vị tư vấn và đối tác giới thiệu được hưởng <b style="color:var(--gold)">chính sách chia sẻ doanh thu</b>.
+          VieSchool không trả hoa hồng cho giáo viên đứng lớp với học sinh của chính mình - giáo viên được miễn phí công cụ theo dõi lớp.
           Liên hệ nhanh qua Zalo / WhatsApp: <b style="color:var(--text)">0948 042 989</b>.</p>
       </div>
       <a class="mail" href="mailto:hello@vieschool.com?subject=D%C3%B9ng%20th%E1%BB%AD%20English%20Arena">hello@vieschool.com</a>
@@ -489,7 +484,11 @@
 <footer>
   <div class="wrap foot">
     <div class="l">VieSchool - hệ sinh thái số cho trường tiểu học Việt Nam</div>
+    <div class="legal-id">Đơn vị cung cấp dịch vụ: VieSchool - người đại diện Lê Duy Linh · hello@vieschool.com · 0948 042 989</div>
     <div class="domains">
+      <a href="/chinh-sach-bao-mat">Chính sách bảo mật</a>
+      <a href="/dieu-khoan">Điều khoản sử dụng</a>
+      <a href="/chinh-sach-ban-hang">Chính sách bán hàng</a>
       <a href="https://ea.vieschool.com">ea.vieschool.com</a>
       <a href="https://congcuso.vieschool.com">congcuso.vieschool.com</a>
       <a href="https://sochunhiem.vieschool.com">sochunhiem.vieschool.com</a>

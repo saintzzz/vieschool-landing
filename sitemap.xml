@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://vieschool.com/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://vieschool.com/chinh-sach-bao-mat</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://vieschool.com/dieu-khoan</loc><changefreq>yearly</changefreq></url>
+  <url><loc>https://vieschool.com/chinh-sach-ban-hang</loc><changefreq>yearly</changefreq></url>
 </urlset>
