@@ -19,7 +19,7 @@ Two separate product lines:
 
 ### English Arena (cho phụ huynh và học sinh)
 
-- [Luyện thi IOE tiểu học](https://ea.vieschool.com/guides/luyen-thi-ioe-tieu-hoc)
+- [Luyện thi tiếng Anh trực tuyến tiểu học](https://ea.vieschool.com/guides/luyen-thi-tieng-anh-truc-tuyen-tieu-hoc)
 - [Phonics cho học sinh tiểu học](https://ea.vieschool.com/guides/phonics-hoc-sinh-tieu-hoc)
 - [Học tiếng Anh theo SGK](https://ea.vieschool.com/guides/hoc-tieng-anh-theo-sgk)
 - [Mua gói EA](https://ea.vieschool.com/mua)
