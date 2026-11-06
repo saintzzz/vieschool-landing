@@ -4,7 +4,7 @@
 
 ## Products
 
-- [English Arena](https://ea.vieschool.com): Luyện tiếng Anh tiểu học - 99.000+ câu hỏi SGK, 290+ đề thi IOE, 15 trò chơi
+- [English Arena](https://ea.vieschool.com): Luyện tiếng Anh tiểu học - 99.000+ câu hỏi SGK, 290+ đề thi thử, 15 trò chơi
 - [Sổ Chủ nhiệm số](https://sochunhiem.vieschool.com): Sổ chủ nhiệm điện tử cho GVCN - nhận xét, hạnh kiểm, báo cáo theo Thông tư 22
 - [VieSchool Fast Track](https://fasttrack.vieschool.com): Vietnam airport arrival guides in English - fast track, e-Visa, immigration wait times
 
