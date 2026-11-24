@@ -267,6 +267,11 @@
   .foot .domains { display:flex; gap:18px; flex-wrap:wrap; }
   .foot .domains a { color:#B9C3D4; font-size:13.5px; text-decoration:none; border-bottom:1px dashed rgba(255,255,255,.25); padding-bottom:1px; }
   .foot .domains a:hover { color:var(--gold); }
+  .foot .member { display:flex; align-items:center; gap:12px; margin-top:6px; }
+  .foot .member .tag { color:var(--muted); font-size:12px; }
+  .foot .member a { background:#fff; border-radius:6px; padding:4px 8px; display:inline-flex; }
+  .foot .member a:hover { opacity:.9; }
+  .foot .member img { height:22px; width:auto; display:block; }
 
   @media (max-width:860px) {
     .products { grid-template-columns:1fr; }
@@ -485,6 +490,12 @@
   <div class="wrap foot">
     <div class="l">VieSchool - hệ sinh thái số cho trường tiểu học Việt Nam</div>
     <div class="legal-id">Đơn vị cung cấp dịch vụ: VieSchool - người đại diện Lê Duy Linh · hello@vieschool.com · 0948 042 989</div>
+    <div class="member">
+      <a href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener" aria-label="NVIDIA Inception Program">
+        <img src="/nvidia-inception-badge.svg" alt="NVIDIA Inception Program Member">
+      </a>
+      <span class="tag">Thành viên chương trình NVIDIA Inception</span>
+    </div>
     <div class="domains">
       <a href="/chinh-sach-bao-mat">Chính sách bảo mật</a>
       <a href="/dieu-khoan">Điều khoản sử dụng</a>
